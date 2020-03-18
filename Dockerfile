@@ -22,10 +22,13 @@ VOLUME /data
 ADD server.properties /tmp/server.properties
 WORKDIR /data
 
-EXPOSE 25565
+EXPOSE 25566
 
 CMD ["/start.sh"]
 
 ENV MOTD "Monoklatsch FTB SkyFactory 4"
 ENV LEVEL world
 ENV JVM_OPTS "-Xms2048m -Xmx2048m"
+
+LABEL traefik.enable true
+LABEL traefik.frontend.rule Host:sf4.imontou.ch,
