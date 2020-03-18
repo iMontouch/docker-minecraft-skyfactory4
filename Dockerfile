@@ -22,7 +22,7 @@ VOLUME /data
 ADD server.properties /tmp/server.properties
 WORKDIR /data
 
-EXPOSE 25566
+EXPOSE 25565
 
 CMD ["/start.sh"]
 
